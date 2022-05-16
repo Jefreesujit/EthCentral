@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/EthCentral/static/css/main.4ffb6a0e.css",
+    "main.js": "/EthCentral/static/js/main.260672da.js",
+    "service-worker.js": "/EthCentral/service-worker.js",
+    "static/media/Coin98.png": "/EthCentral/static/media/Coin98.1e4e40738d77467e19ba.png",
+    "static/media/wallet-connect.svg": "/EthCentral/static/media/wallet-connect.304e327744ae5c9b1b62b58f50df6734.svg",
+    "TokenPocket.svg": "/EthCentral/0ba487424539ab81b79fe14307e77334.svg",
+    "static/media/MathWallet.svg": "/EthCentral/static/media/MathWallet.19212234cfaec388ea6f339d0cea9df9.svg",
+    "SafePal.svg": "/EthCentral/e7068bbce0757878c2ef3e30191ce580.svg",
+    "index.html": "/EthCentral/index.html",
+    "main.4ffb6a0e.css.map": "/EthCentral/static/css/main.4ffb6a0e.css.map",
+    "main.260672da.js.map": "/EthCentral/static/js/main.260672da.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4ffb6a0e.css",
+    "static/js/main.260672da.js"
+  ]
+}
