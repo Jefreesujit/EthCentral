@@ -24,6 +24,7 @@
 
 .ant-layout {
   justify-content: space-between;
+  background: #00204b16;
 }
 
 .ant-layout-footer {

@@ -18,20 +18,20 @@ function MenuItems() {
       }}
       defaultSelectedKeys={[pathname]}
     >
-      <Menu.Item key="/erc20balance">
-        <NavLink to="/erc20balance">Tokens</NavLink>
+      <Menu.Item key="/tokens">
+        <NavLink to="/tokens">Tokens</NavLink>
       </Menu.Item>
       <Menu.Item key="/wallet">
         <NavLink to="/wallet">Transfer Funds</NavLink>
       </Menu.Item>
-      <Menu.Item key="/nftBalance">
-        <NavLink to="/nftBalance">NFTs</NavLink>
+      <Menu.Item key="/nfts">
+        <NavLink to="/nfts">NFTs</NavLink>
       </Menu.Item>
-      <Menu.Item key="/erc20transfers">
-        <NavLink to="/erc20transfers">Transactions</NavLink>
+      <Menu.Item key="/transactions">
+        <NavLink to="/transactions">Transactions</NavLink>
       </Menu.Item>
-      <Menu.Item key="/1inch">
-        <NavLink to="/1inch">Exchange</NavLink>
+      <Menu.Item key="/exchange">
+        <NavLink to="/exchange">Exchange</NavLink>
       </Menu.Item>
       {/* <Menu.Item key="onramp">
         <NavLink to="/onramp">💵 Fiat</NavLink>
