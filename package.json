@@ -1,7 +1,7 @@
 {
   "name": "eth-central",
   "version": "1.0.0",
-  "homepage": "https://jefreesujit.github.io/eth-central",
+  "homepage": "https://jefreesujit.github.io/EthCentral/",
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
     "@testing-library/jest-dom": "^5.11.4",

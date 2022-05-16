@@ -8,7 +8,6 @@ import {
 } from "react-router-dom";
 import Account from "components/Account/Account";
 import Chains from "components/Chains";
-// import TokenPrice from "components/TokenPrice";
 import ERC20Balance from "components/ERC20Balance";
 import ERC20Transfers from "components/ERC20Transfers";
 import DEX from "components/DEX";
@@ -18,8 +17,6 @@ import { Layout, Tabs } from "antd";
 import "antd/dist/antd.css";
 import NativeBalance from "components/NativeBalance";
 import "./style.css";
-// import QuickStart from "components/QuickStart";
-// import Contract from "components/Contract/Contract";
 // import Ramper from "components/Ramper";
 import Text from "antd/lib/typography/Text";
 import MenuItems from "./components/MenuItems";
@@ -45,7 +42,7 @@ const styles = {
     fontFamily: "Roboto, sans-serif",
     borderBottom: "2px solid rgba(0, 0, 0, 0.06)",
     padding: "0 10px",
-    boxShadow: "0 1px 10px rgb(151 164 175 / 10%)",
+    boxShadow: "rgb(149 152 155) 2px 5px 10px",
   },
   headerRight: {
     display: "flex",
@@ -53,7 +50,7 @@ const styles = {
     alignItems: "center",
     fontSize: "15px",
     fontWeight: "600",
-    color: "white !important",
+    color: "white",
   },
 };
 const App = () => {
@@ -75,12 +72,6 @@ const App = () => {
           <Chains />
           <MenuItems />
           <div style={styles.headerRight}>
-            {/* <TokenPrice
-              address="0x1f9840a85d5af5bf1d1762f925bdaddc4201f984"
-              chain="eth"
-              image="https://cloudflare-ipfs.com/ipfs/QmXttGpZrECX5qCyXbBQiqgQNytVGeZW5Anewvh2jc4psg/"
-              size="40px"
-            /> */}
             <NativeBalance />
             <Account />
           </div>
@@ -88,16 +79,22 @@ const App = () => {
 
         <div style={styles.content}>
           <Switch>
-            <Route path="/erc20balance">
+            <Route exact path="/">
+              <Redirect to="/tokens" />
+            </Route>
+            <Route path="/EthCentral">
+              <Redirect to="/tokens" />
+            </Route>
+            <Route path="/tokens">
               <ERC20Balance />
             </Route>
             <Route path="/wallet">
               <Wallet />
             </Route>
-            <Route path="/nftBalance">
+            <Route path="/nfts">
               <NFTBalance />
             </Route>
-            <Route path="/1inch">
+            <Route path="/exchange">
               <Tabs defaultActiveKey="1" style={{ alignItems: "center" }}>
                 <Tabs.TabPane tab={<span>Ethereum</span>} key="1">
                   <DEX chain="eth" />
@@ -110,18 +107,12 @@ const App = () => {
                 </Tabs.TabPane>
               </Tabs>
             </Route>
-            <Route path="/erc20transfers">
+            <Route path="/transactions">
               <ERC20Transfers />
             </Route>
             {/* <Route path="/onramp">
               <Ramper />
             </Route> */}
-            {/* <Route path="/contract">
-              <Contract />
-            </Route> */}
-            <Route exact path="/">
-              <Redirect to="/erc20balance" />
-            </Route>
             <Route path="/nonauthenticated">
               <>Please login using the "Authenticate" button</>
             </Route>
@@ -131,7 +122,6 @@ const App = () => {
       <Footer
         style={{
           textAlign: "center",
-          position: "fixed",
           bottom: 0,
           left: 0,
           right: 0,
@@ -154,7 +144,7 @@ const App = () => {
 
 export const Logo = () => (
   <div style={{ display: "flex", width: "300px" }}>
-    <img src="/logo-name.png" style={{ height: "60px" }}></img>
+    <img src="/EthCentral/logo-name.png" style={{ height: "60px" }}></img>
   </div>
 );
 
